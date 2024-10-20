@@ -1,0 +1,122 @@
+<html>
+<head>
+<title> Project 1 </title>
+<style>
+    *{
+        margin:0; padding: 0; box-sizing: border-box;
+    }
+.container
+{
+    background-color: #e5e5fd;
+    min-height: 100vh;
+    border: 10px solid #1d1e4c;
+}
+.content
+{
+    max-width: 900px;
+    margin: 0 auto;
+}
+.top-section
+{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.top-section h1
+{  
+   font-size: 50px;
+   font-weight: bold;
+   color: #1d1e4c;
+   text-transform: uppercase;
+}
+.top-section h4
+{
+    text-align: end;
+    font-size: 30px;
+}
+.image_container, img{
+    width: 300px; height: 320px;
+}
+.image_container{
+    border-radius: 50%;
+    overflow: hidden;
+}
+.about_section
+{
+    margin-top: 50px;
+}
+.about-section h2{
+    font-size: 70px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.about_Section p{
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 2px;
+    text-align: justify;
+}
+.biography_section
+{
+    margin: 50px 0;
+}
+.biography_section h3
+{
+    margin-bottom: 20px;
+}
+.biography_section ul
+{
+    margin-left: 50px;
+}
+.biography_section li
+{
+    margin-bottom: 15px;
+}
+footer
+{
+    margin: 50px 0;
+}
+footer p
+{
+    text-align: end;
+}
+</style>
+</head>
+<html>
+    <body>
+        <div class = "container">
+            <div class="content">
+                <section class="top-section">
+                    <div class="image_container">
+                        <img src="manushi.jpg" alt = "tribute"/>
+                    </div>
+                    <div>
+                        <h1> Manushi Chillar </h1>
+                        <h4> 1997 - present </h4>
+                </section>
+                
+                <section class="about_section">
+                    <h2> Miss World Manushi Chiller </h2>
+                    <p>Manushi Chhillar (born 14 May 1997) is an Indian actress, model and the winner of Miss World 2017 pageant. She represented her state of Haryana at the Femina Miss India 2017 pageant and won the title of Femina Miss India World 2017 and then went on to become the sixth representative from India to be crowned Miss World after 17 years.[3]
+
+                        Chhillar made her acting debut with the role of Sanyogita in the historical drama Samrat Prithviraj (2022), and has since appeared in The Great Indian Family (2023).
+                    </p>
+                </section>
+                <section class="biography_section">
+                    <h3>More About Manushi Chiller</h3>
+                    <ul>
+                        <li>Chhillar was born on 14 May 1997[3] in Rohtak into a Haryanvi family,[4] although her ancestral home is in Bamnoli village of Jhajjar district.</li>
+                    <li>Chhillar studied at St. Thomas' School, New Delhi and was the all India CBSE topper in English subject in class 12, and scored 96 percent in her boards</li>
+                    <li>She cleared the All India Pre Medical Test (now, NEET) in her first attempt.</li>
+                    <li>She was pursuing a medical degree (MBBS) at the Bhagat Phool Singh Medical College in Sonipat.</li>
+
+                    
+                    
+                    </ul>
+                </section>
+                <footer><p>Read more about Manushi Chillar on Wikipedia.</p> </footer>
+            </div>
+        </div>
+    </body>
+    </html>
