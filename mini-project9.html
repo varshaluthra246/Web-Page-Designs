@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+    <link rel="stylesheet" href="mini-project9.css" />
+</head>
+<body>
+    <h1> form Validation in Javascript </h1>
+    <form action="mini-project9.html" name="myForm" onsubmit="return validateForm()" method="post">
+        <div class="formdesign" id="name">
+            Name: <input type="text" name="fname" required>
+            <b><span class="formerror">*this is an error</span></b>
+        </div>
+
+        <div class="formdesign" id="email">
+            email: <input type="email" name="femail">
+            <b><span class="formerror"></span></b>
+        </div>
+
+        <div class="formdesign" id="phone">
+            Phone: <input type="text" name="fphone">
+            <b><span class="formerror"></span></b>
+        </div>
+        
+        <div class="formdesign" id="phone">
+            Password: <input type="password" name="fpass">
+            <b><span class="formerror"></span></b>
+        </div>
+
+        <div class="formdesign" id="phone">
+            confirm Password: <input type="password" name = "cpass">
+            <b><span class="formerror"></span></b>
+        </div>
+
+        <input class="btn" type="submit" value="submit">
+    </form>
+
+    <script>
+
+        function seterror(id, error)
+        {
+            //sets error inside tag of id
+            element = document.getElementById(id);
+            element.getElementsByClassName('formerror')[0].innerHTML = error;
+        }
+
+        function validateForm()
+        {
+            var returnval = true;
+
+            //perform validation and if validation fails, 
+            //set the value of returnval to false;
+            var name=document.forms['myForm']["fname"].value;
+
+            /*if (name.length==0){
+                seterror("name","*length of name cannot be zero ");
+                returnval = false;
+            }*/
+
+            if (name.length<5){
+                seterror("name","*length of name is too short ");
+                returnval = false;
+            }
+             //console.log(name);
+           
+
+            return returnval;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mini-project7.css" />
+    <title>Mini-project - 7</title>
+</head>
+<body>
+    <form name="form" onsubmit="return validateForm()">
+        <h2>Registration form</h2>
+        <div class="box">
+            <label>Full name</label>
+            <input type="text" name="name" id="name">
+            <div class="error" id="nameErr"></div> 
+        </div>
+
+        <div class="box">
+            <label>Email Address</label>
+            <input type="text" name="email" id="email">
+            <div class="error" id="emailErr"></div> 
+        </div>
+
+        <div class="box">
+            <label>Mobile Number</label>
+            <input type="text" name="mobile" id="mobile" maxlength="10">
+            <div class="error" id="mobileErr"></div> 
+        </div>
+
+        <div class="box">
+            <label>Country</label>
+            <select name="country" id="country">
+                <option >select</option>
+                <option >India</option>
+                <option >London</option>
+            </select>
+            <div class="error"  id="nameErr"></div>
+        </div>
+
+        <div class="box">
+            <label>Gender</label>
+            <div class="form-inline" id="gender">
+                <label><input type="radio" name="gender" value="male">Male</label>
+                <label><input type="radio" name="gender" value="female">Female</label>
+            </div>
+
+            <div class="error" id="genderErr"></div>
+        </div>
+
+        <div class="box">
+            <input type="submit" value="submit">
+        </div>
+    </form>
+
+    <script>
+        function printError(id, msg)
+        {
+            document.getElementById(id).innerHTML = msg;
+        }
+
+        function validateForm(){
+            var name=document.Form.name.value;
+            var email=document.Form.email.value;
+            var mobile=document.Form.mobile.value;
+            var country=document.Form.country.value;
+            var gender=document.Form.gender.value;
+
+            var nameErr = emailErr = mobileErr = countryErr = genderErr = true;
+
+            if(name = "")
+            {
+                printError("nameErr", "please enter your name");
+                var elem=document.getElementById("name");
+                elem.classList.add("input-2");
+                elem.classList.remove("input-1");
+            }
+            else{
+                var regex = /^[a-zA-Z\s]+$/;
+                if(regex.test(name) === false)
+                {
+                    printError("nameErr", "please enter valid name");
+                    var elem=document.getElementById("name");
+                    elem.classList.add("input-2");
+                    elem.classList.remove("input-1");
+                }
+                else
+                {
+                    printError("nameErr", " ");
+                    nameError = false;
+                    var elem=document.getElementById("name");
+                    elem.classList.add("input-2");
+                    elem.classList.remove("input-1");
+                }
+            }
+
+            if(email = "")
+            {
+                printError("emailErr", "please enter your email address");
+                var elem=document.getElementById("email");
+                elem.classList.add("input-2");
+                elem.classList.remove("input-1");
+            }
+            else{
+                var regex = /^\S+@\S+\.\S+$/;
+                if(regex.test(email) === false)
+                {
+                    printError("emailErr", "please enter valid email name");
+                    var elem=document.getElementById("email");
+                    elem.classList.add("input-2");
+                    elem.classList.remove("input-1");
+                }
+                else
+                {
+                    printError("emailErr", " ");
+                    nameError = false;
+                    var elem=document.getElementById("name");
+                    elem.classList.add("input-2");
+                    elem.classList.remove("input-1");
+                }
+            }
+
+            
+        };
+        
+    </script>
+</body>
+</html>

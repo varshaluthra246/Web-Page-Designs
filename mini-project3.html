@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-project 3</title>
+    <style>
+        body{
+            background: skyblue;
+        }
+        .container{
+            border: 1px solid black;
+            width: 95%;
+            height: 100vh;
+            display: flex;
+        }
+        .quotes{
+            border: 1px solid black;
+            width: 900px;
+            height: 450px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 50px;
+            color: grey;
+            background-color: #f4edea;
+            border: 10px solid #f4d1ae;
+        }
+        .quotes p, .quotes h3{
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="quotes">
+            <p id="quote">Hello </p>
+            <h1 id="author">Varsha Luthra</h1>
+        </div>
+    </div>
+
+    <div>
+        <button onclick="generate()" type="button" >Generate Quotes</button>
+    </div>
+
+    <script>
+        function generate(){
+            var quotes = {
+                "Henry Ford" : '"The whole secret of a successful life is to find out what is one’s destiny to do, and then do it."',
+                "abc" : '"Sing like no one’s listening, love like you’ve never been hurt, dance like nobody’s watching, and live like it’s heaven on earth."',
+                "Leo Burnett":'"Curiosity about life in all of its aspects, I think, is still the secret of great creative people."'
+            }
+
+            var authors = Object.keys(quotes);
+
+            //console.log(authors);
+
+            var author = authors[Math.floor(Math.random()*authors.length)];
+
+            var quote = quotes[author];
+
+            document.getElementById("author").innerHTML = author;
+            document.getElementById("quote").innerHTML = quote;
+        }
+    </script>
+</body>
+</html>

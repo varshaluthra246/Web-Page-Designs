@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mini-project5.css" />
+    <title>Mini-project 5</title>
+</head>
+<body>
+    <div class="container">
+        <div class="counter">
+            <h1>COUNTER IN JAVASCRIPT</h1>
+            <h1 id="count">0</h1>
+            <div>
+                <button type="button" onclick="changeCount(1)">Increase</button>
+                <button type="button" onclick="changeCount(-1)">Decrease</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var count = 0;
+
+        function changeCount(num){
+            count+=num;   //count = count + num
+            document.getElementById("count").innerHTML = count;
+        }
+    </script>
+</body>
+</html>

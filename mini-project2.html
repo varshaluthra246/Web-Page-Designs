@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-project 2</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button onclick="changeColors()" type="button" >Click me to change color</button>
+    </div>
+    <script>
+        var index = 0;
+        function changeColors()
+        {
+            var colors = ["red", "blue", "orange","yellow","green","purple"];
+            document.getElementsByTagName("body")[0].style.background    = colors[index++];
+
+            if(index > colors.length - 1)
+            {
+                index = 1;
+            }
+        }
+    </script>
+</body>
+</html>
