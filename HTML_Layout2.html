@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic HTML Layout</title>
+    <style>
+        body{
+            font-family: arial, Helvetica;
+            background: slategray;
+            margin: 0; padding: 0;          
+        }
+        #wrapper{
+            border: 0px solid black;
+            width: 1000px;
+            background: white;
+            margin: 0 auto;
+        }
+        #header{
+            background: crimson;
+            height: 100px;
+            color: white;
+        }
+        #header h1{
+            padding: 30px 0 0 20px;
+        }
+        #menu{
+            background: lightblue;
+        }
+        #menu ul{
+            margin: 0; padding: 0;
+        }
+        #menu li{
+            display: inline-block;
+        }
+        #menu li a{
+            display: block;
+            padding: 10px 13px;
+            text-decoration: none;
+            color: black;
+        }
+        #menu li a:hover{
+            background: crimson;
+            color: white;
+        }
+        #content{
+            width: 800px;
+            float: left;
+            min-height: 500px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        #content p{
+            text-align: justify;
+            text-align-last: right;
+        }
+        #sidebar{
+            background: lightblue;
+            width: 200px;
+            float: right;
+            min-height: 500px;
+        }
+        #sidebar a{
+            text-decoration: none;
+            color: black;
+            padding: 20px;
+            display: block;
+        }
+        #sidebar a:hover{
+            font-size: 25px;
+            background-color: purple;
+            text-decoration: 2px underline dotted white;
+            color: white;
+           
+        }
+        #footer{
+            background: lightsalmon;
+            clear: both;
+            padding: 5px 10px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <h1>Subjectsaholic</h1>
+            
+        </div>
+        <div id="menu">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">gallery</a></li>
+            <li><a href="">Contact Us</a></li>
+        </ul>
+    </div>
+        <div id="content">
+            <h2>Design Basic HTML Layout</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit odit ratione, non nulla ducimus, hic unde nostrum officia quidem magni ad soluta distinctio ut deserunt dolorem asperiores repudiandae natus consectetur?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente illum totam illo dolore deserunt unde sit cupiditate, ipsum tempora voluptates quae mollitia rerum. Enim, neque! Libero a voluptatibus ullam culpa.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit odit ratione, non nulla ducimus, hic unde nostrum officia quidem magni ad soluta distinctio ut deserunt dolorem asperiores repudiandae natus consectetur?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit</p>
+            
+                <img src="library.jpg" width = "400" height="200">
+        
+            </div>
+        <div id="sidebar">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">gallery</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+        </div>
+        <div id="footer">
+            Subjectsaholic@copyright 2023.
+            
+        </div>
+    </div>
+</body>
+</html>
